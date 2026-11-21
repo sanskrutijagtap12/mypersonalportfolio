@@ -5,7 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sanskruti Jagtap | Personal Portfolio</title>
+<meta name="description" content="Personal portfolio of Sanskruti Jagtap, BCA student and web development learner.">
+
+<title>Sanskruti Jagtap | Portfolio</title>
 
 <style>
 
@@ -15,6 +17,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -25,10 +30,22 @@ body {
     line-height: 1.6;
 }
 
+section {
+    padding: 80px 10%;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+section h2 {
+    color: #782653;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
 /* NAVBAR */
 
 header {
-    background: #702653;
+    background: #782653;
     padding: 18px 7%;
     position: sticky;
     top: 0;
@@ -44,23 +61,32 @@ header {
 .logo {
     color: white;
     font-size: 27px;
-    font-weight: bold;
 }
 
-.navbar ul {
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 22px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
+.nav-links a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.navbar ul li a:hover {
-    color: #ffb6dc;
+.nav-links a:hover {
+    color: #ffc2df;
+}
+
+.menu-btn {
+    display: none;
+    background: white;
+    color: #782653;
+    border: none;
+    padding: 8px 13px;
+    font-size: 20px;
+    border-radius: 5px;
 }
 
 /* HOME */
@@ -68,30 +94,28 @@ header {
 #home {
     min-height: 90vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 40px 10%;
+    align-items: center;
     background: linear-gradient(135deg, #f8d5e8, #e5c5f1);
 }
 
 .home-content h3 {
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .home-content h1 {
     font-size: 48px;
-    color: #702653;
+    color: #782653;
     margin: 15px 0;
 }
 
 .home-content h2 {
     font-size: 23px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .home-content p {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 25px;
 }
 
@@ -99,33 +123,20 @@ header {
 
 .btn {
     display: inline-block;
-    background: #702653;
+    background: #782653;
     color: white;
-    padding: 12px 28px;
+    padding: 13px 28px;
     border-radius: 30px;
     border: none;
     text-decoration: none;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #a53c7c;
+    background: #ae4782;
     transform: translateY(-3px);
-}
-
-/* COMMON SECTIONS */
-
-section {
-    padding: 75px 10%;
-    text-align: center;
-}
-
-section h2 {
-    color: #702653;
-    font-size: 34px;
-    margin-bottom: 30px;
 }
 
 /* ABOUT */
@@ -136,29 +147,26 @@ section h2 {
     font-size: 18px;
 }
 
-/* CARDS */
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px #ddd;
-    margin: 15px;
-}
-
-.card h3 {
-    color: #702653;
-    margin-bottom: 12px;
-}
-
 /* EDUCATION */
 
-.education-container {
+.education-card {
+    background: white;
     max-width: 650px;
+    padding: 30px;
     margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.education-card h3 {
+    color: #782653;
 }
 
 /* SKILLS */
+
+#skills {
+    background: #fff0f7;
+}
 
 .skills-container {
     display: flex;
@@ -176,7 +184,7 @@ section h2 {
 }
 
 .skill:hover {
-    background: #702653;
+    background: #782653;
     color: white;
     transform: translateY(-5px);
 }
@@ -186,16 +194,24 @@ section h2 {
 .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 22px;
 }
 
-.project-container .card {
-    margin: 0;
+.project-card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
     transition: 0.3s;
 }
 
-.project-container .card:hover {
+.project-card:hover {
     transform: translateY(-7px);
+}
+
+.project-card h3 {
+    color: #782653;
+    margin-bottom: 15px;
 }
 
 /* RESUME */
@@ -210,7 +226,7 @@ section h2 {
     background: #fff0f7;
 }
 
-.contact-intro {
+.contact-info {
     margin-bottom: 25px;
 }
 
@@ -223,16 +239,16 @@ section h2 {
 }
 
 .social-links a {
-    background: #702653;
+    background: #782653;
     color: white;
-    text-decoration: none;
     padding: 12px 25px;
     border-radius: 25px;
+    text-decoration: none;
     transition: 0.3s;
 }
 
 .social-links a:hover {
-    background: #a53c7c;
+    background: #ae4782;
     transform: translateY(-3px);
 }
 
@@ -252,7 +268,6 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
 }
 
 textarea {
@@ -262,32 +277,45 @@ textarea {
 
 #formMessage {
     margin-top: 20px;
-    color: #702653;
+    color: #782653;
     font-weight: bold;
 }
 
 /* FOOTER */
 
 footer {
-    background: #702653;
+    background: #782653;
     color: white;
-    text-align: center;
     padding: 22px;
+    text-align: center;
 }
 
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
+    section {
+        padding: 55px 5%;
     }
 
-    .navbar ul {
+    .navbar {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .home-content h1 {
@@ -296,10 +324,6 @@ footer {
 
     .home-content h2 {
         font-size: 19px;
-    }
-
-    section {
-        padding: 50px 5%;
     }
 
     .project-container {
@@ -317,8 +341,19 @@ footer {
 
 }
 
-</style>
+@media (max-width: 400px) {
 
+    .home-content h1 {
+        font-size: 27px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
@@ -331,13 +366,20 @@ footer {
 
 <h2 class="logo">Sanskruti.</h2>
 
-<ul>
+<button class="menu-btn" id="menuBtn"
+aria-label="Toggle navigation" aria-expanded="false">
+☰
+</button>
+
+<ul class="nav-links" id="navLinks">
+
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
@@ -357,11 +399,13 @@ footer {
 <h2>BCA Student | Web Development Learner</h2>
 
 <p>
-I am passionate about technology, web development
+I am passionate about technology, programming
 and creating beautiful and user-friendly websites.
 </p>
 
-<a href="#about" class="btn">Explore My Portfolio</a>
+<a href="#about" class="btn">
+Explore My Portfolio
+</a>
 
 </div>
 
@@ -378,9 +422,11 @@ My name is Sanskruti Jagtap. I am pursuing
 Bachelor of Computer Applications (BCA) at
 SNDT Arts and Commerce College for Women.
 
-I enjoy learning new technologies, improving my
-coding skills and developing creative websites.
-My goal is to become a skilled web developer.
+I am interested in web development and technology.
+I enjoy learning new programming languages,
+developing websites and improving my technical skills.
+
+My goal is to become a professional web developer.
 </p>
 
 </section>
@@ -391,9 +437,7 @@ My goal is to become a skilled web developer.
 
 <h2>My Education</h2>
 
-<div class="education-container">
-
-<div class="card">
+<div class="education-card">
 
 <h3>Bachelor of Computer Applications (BCA)</h3>
 
@@ -403,32 +447,23 @@ My goal is to become a skilled web developer.
 
 </div>
 
-</div>
-
 </section>
 
 <!-- SKILLS -->
 
 <section id="skills">
 
-<h2>My Skills</h2>
+<h2>My Technical Skills</h2>
 
 <div class="skills-container">
 
 <div class="skill">HTML5</div>
-
 <div class="skill">CSS3</div>
-
 <div class="skill">JavaScript</div>
-
 <div class="skill">PHP</div>
-
 <div class="skill">MySQL</div>
-
 <div class="skill">Responsive Design</div>
-
-<div class="skill">VS Code</div>
-
+<div class="skill">Visual Studio Code</div>
 <div class="skill">GitHub</div>
 
 </div>
@@ -443,35 +478,35 @@ My goal is to become a skilled web developer.
 
 <div class="project-container">
 
-<div class="card">
+<div class="project-card">
 
 <h3>Sweet Crumbs Bakery</h3>
 
 <p>
-A bakery management system for managing
-products, customers and orders.
+A bakery management system designed to manage
+bakery products, customers and orders.
 </p>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>TechNova Electronics</h3>
 
 <p>
-An electronics shopping website with
-product listings and shopping features.
+An electronics shopping website featuring
+products, categories and shopping functionality.
 </p>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>Personal Portfolio</h3>
 
 <p>
-A personal website showcasing my education,
-skills, projects and contact information.
+A responsive personal website showcasing
+my education, technical skills and projects.
 </p>
 
 </div>
@@ -486,7 +521,7 @@ skills, projects and contact information.
 
 <h2>My Resume</h2>
 
-<p>Click below to download my resume.</p>
+<p>Download my professional resume.</p>
 
 <a href="resume.pdf" class="btn" download>
 Download Resume
@@ -500,8 +535,8 @@ Download Resume
 
 <h2>Contact Me</h2>
 
-<p class="contact-intro">
-Let's connect! Feel free to contact me.
+<p class="contact-info">
+Let's connect and work together!
 </p>
 
 <div class="social-links">
@@ -547,7 +582,7 @@ Send Message
 
 </form>
 
-<p id="formMessage"></p>
+<p id="formMessage" aria-live="polite"></p>
 
 </section>
 
@@ -565,6 +600,38 @@ Send Message
 
 <script>
 
+// MOBILE MENU
+
+const menuBtn = document.getElementById("menuBtn");
+
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+
+    navLinks.classList.toggle("active");
+
+    const expanded = navLinks.classList.contains("active");
+
+    menuBtn.setAttribute("aria-expanded", expanded);
+
+});
+
+// CLOSE MENU AFTER CLICKING LINK
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+// CONTACT FORM
+
 const contactForm = document.getElementById("contactForm");
 
 contactForm.addEventListener("submit", function(event) {
@@ -581,13 +648,15 @@ contactForm.addEventListener("submit", function(event) {
 
     if (!name || !email || !message) {
 
-        formMessage.textContent = "Please fill all fields.";
+        formMessage.textContent = "Please fill in all fields.";
 
         return;
 
     }
 
-    const subject = encodeURIComponent("Portfolio Contact Message");
+    const subject = encodeURIComponent(
+        "Portfolio Contact Message"
+    );
 
     const body = encodeURIComponent(
         "Name: " + name +
@@ -595,9 +664,10 @@ contactForm.addEventListener("submit", function(event) {
         "\nMessage: " + message
     );
 
-    const myEmail = "sanskrutijagtap12@gmail.com";
+    const myEmail = "YOUR-EMAIL@example.com";
 
-    formMessage.textContent = "Opening your email application...";
+    formMessage.textContent =
+        "Opening your email application...";
 
     window.location.href =
         "mailto:" + myEmail +
