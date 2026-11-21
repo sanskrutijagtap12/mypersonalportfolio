@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Portfolio</title>
+
+<style>
+
+/* GENERAL CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9ff;
+    color: #222;
+    transition: 0.4s;
+}
+
+section {
+    padding: 90px 10%;
+    min-height: 60vh;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #7257d5;
+    color: white;
+}
+
+/* NAVBAR */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #7257d5;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: white;
+    color: black;
+    font-size: 22px;
+}
+
+/* HOME */
+
+#home {
+    text-align: center;
+    padding-top: 150px;
+}
+
+#home h1 {
+    font-size: 45px;
+    color: #7257d5;
+}
+
+#home p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* ABOUT */
+
+#about, #projects {
+    background: #eeeaff;
+    text-align: center;
+}
+
+/* SKILLS */
+
+#skills {
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    padding: 20px 35px;
+    background: #7257d5;
+    color: white;
+    border-radius: 10px;
+}
+
+/* PROJECTS */
+
+.project-card {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+/* CONTACT */
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+}
+
+textarea {
+    height: 120px;
+}
+
+#formMessage {
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #7257d5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+    background: #151515;
+    color: white;
+}
+
+.dark-mode section {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .project-card {
+    background: #333;
+    color: white;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background: #333;
+    color: white;
+}
+
+/* SCROLL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background: #7257d5;
+        padding: 25px;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    #home h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <h2>My Portfolio</h2>
+
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
+
+    <nav id="navMenu">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#resume">Resume</a>
+    </nav>
+
+    <button id="themeToggle">🌙</button>
+
+</header>
+
+
+<!-- HOME SECTION -->
+
+<section id="home" class="reveal">
+
+    <h1>Hello, I'm Sanskruti Jagtap</h1>
+
+    <p>I'm a Web Development Student</p>
+
+    <p>Welcome to my personal portfolio website.</p>
+
+    <a href="#about">
+        <button>Explore More</button>
+    </a>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section id="about" class="reveal">
+
+    <h1>About Me</h1>
+
+    <p>
+        I am a BCA student interested in web development
+        and learning new technologies.
+        I enjoy creating attractive and responsive websites.
+    </p>
+
+</section>
+
+
+<!-- SKILLS SECTION -->
+
+<section id="skills" class="reveal">
+
+    <h1>My Skills</h1>
+
+    <div class="skills-container">
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">PHP</div>
+
+        <div class="skill">MySQL</div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>Bakery Management System</h3>
+            <p>
+                A Bakery Management System developed using
+                PHP and MySQL to manage bakery products,
+                customers and orders.
+            </p>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Electronics E-Commerce Website</h3>
+            <p>
+                An online electronics shopping website
+                developed using HTML, CSS and JavaScript.
+                It includes product listings and shopping features.
+            </p>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+                My personal portfolio website showcasing
+                my skills, education and projects.
+            </p>
+            <a href="https://github.com/sanskruti-jagtap12/My-Personal--Portfolio"
+               target="_blank">GitHub</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EDUCATION SECTION -->
+<section id="education">
+
+    <h2>My Education</h2>
+
+    <div class="education-card">
+
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+
+        <p>SNDT Arts and Commerce College for Women</p>
+
+        <p>Currently Pursuing</p>
+
+        <p>Interested in Web Development and Programming.</p>
+
+    </div>
+
+</section>
+
+<!-- RESUME SECTION -->
+
+<section id="resume">
+
+    <h2>My Resume</h2>
+
+    <p>Download my resume to know more about my skills and experience.</p>
+
+    <a href="resume.pdf.pdf" download class="resume-btn">
+        Download Resume
+    </a>
+
+</section><!-- CONTACT SECTION -->
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>Feel free to connect with me!</p>
+
+    <div class="contact-container">
+
+        <a href="mailto:sanskrutijagtap12@gmail.com">
+            Email Me
+        </a>
+
+        <a href="https://www.linkedin.com/in/sanskruti-jagtap-4002a0436"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/sanskruti-jagtap12"
+           target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Sanskruti Jagtap | My Portfolio</p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// 1. MOBILE NAVIGATION
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", function() {
+
+    navMenu.classList.toggle("active");
+
+});
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+
+    link.addEventListener("click", function() {
+
+        navMenu.classList.remove("active");
+
+    });
+
+});
+
+
+// 2. DARK AND LIGHT MODE
+
+const themeToggle = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+
+    document.body.classList.add("dark-mode");
+
+    themeToggle.innerHTML = "☀️";
+
+}
+
+themeToggle.addEventListener("click", function() {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+
+        themeToggle.innerHTML = "☀️";
+
+        localStorage.setItem("theme", "dark");
+
+    } else {
+
+        themeToggle.innerHTML = "🌙";
+
+        localStorage.setItem("theme", "light");
+
+    }
+
+});
+
+
+// 3. SCROLL ANIMATION
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+
+    reveals.forEach(element => {
+
+        const windowHeight = window.innerHeight;
+
+        const elementTop =
+            element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+
+            element.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+
+// 4. CONTACT FORM VALIDATION
+
+const contactForm =
+    document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "" || email === "" || message === "") {
+
+        formMessage.innerHTML =
+            "Please fill all the fields!";
+
+        formMessage.style.color = "red";
+
+    }
+
+    else if (!emailPattern.test(email)) {
+
+        formMessage.innerHTML =
+            "Please enter a valid email address!";
+
+        formMessage.style.color = "red";
+
+    }
+
+    else {
+
+        formMessage.innerHTML =
+            "Thank you! Form submitted successfully.";
+
+        formMessage.style.color = "green";
+
+        contactForm.reset();
+
+    }
+
+});
+
+<div class="contact-links">
+
+    <a href="https://github.com/sanskruti-jagtap12"
+       target="_blank">GitHub</a>
+
+    <a href="https://linkedin.com/in/sanskruti-jagtap-4002a0436"
+       target="_blank">LinkedIn</a>
+
+    <a href="mailto:sanskrutijagtap12@gmail.com">
+       Email Me
+    </a>
+
+</div>
+
+
+// 5. SMOOTH SCROLLING
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(event) {
+
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
